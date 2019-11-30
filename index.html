@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/3b3222625a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/stylesheets.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painttt</title>
+</head>
+<body>
+
+<div class="flexbox">
+
+<div class="left">
+    <div class="text-container">
+        <h5 id="label" class="text-title">CAN / VAS</h5>
+        <h1 id="title" class="text-title">Hello World! <br> Welcome to Paint!</h1>
+        <p id="body" class="text-body">This is where you can draw lots of cool stuff and have lots and lots of fun! Don't be afraid if it's shit! Beauty is in the eye of the beholder! <br> <br> Everybody's gotta start somewhere right! Just click one of the below icons to start drawing!</p>
+    </div>
+    <div class="buttons">       
+        <button class="button fa fa-square" id="drawing-rectangle"></button>
+        <button class="button fa fa-paint-brush" id="drawing-line"></button>
+        <button class="button fas fa-eraser" id="eraser"></button>
+    </div>
+</div>
+
+<div class="vl"></div>
+        
+<div id="canvas-container">
+    <canvas id="canvas-real" class="canvas" width='1340px' height='897px' style='border:2px white solid'></canvas>
+    <canvas id="canvas-draft" class="canvas" width='1340px' height='897px' style='border:2px white solid'></canvas>
+</div>
+
+
+
+    
+
+
+
+
+
+    <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type='text/javascript' src="./assets/javascript/canvasCommons.js"></script>
+    <script type='text/javascript' src="./assets/javascript/drawing-line.js"></script>
+    <script type='text/javascript' src="./assets/javascript/drawing-rectangle.js"></script>
+    <script type='text/javascript' src="./assets/javascript/eraser.js"></script>
+
+    <script type="text/javascript" src="./assets/javascript/init.js"></script> 
+
+    <script src="./assets/javascript/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+
+</body>
+</html>
