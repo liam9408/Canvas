@@ -8,11 +8,11 @@ let count = 0;
 for (var i = 0; i < button.length; i++) {
   $(button[i]).on("click", function() {
     if (count % 2 === 0) {
-      $(`#${event.target.id}`).css("background-color", "skyblue");
+      $(`#${event.target.id}`).css("background-color", "deepskyblue");
       count++;
     } else if (count % 2 !== 0) {
       $(`#${event.target.id}`).css("background-color", "white");
-      currentFunction = new DrawingRectangle(contextReal, contextDraft);
+      currentFunction = new PaintFunction(contextReal, contextDraft);
       count++;
     }
   });
@@ -43,7 +43,7 @@ $('#drawing-line').mouseover(function() {
 $('#eraser').mouseover(function() {
     $('#title').html('Erase that shit! Now!')
     $('#body').html(`Here's your second chance. Don't waste it!`)
-    $('this').mouseleave(function() {
+    $(this).mouseleave(function() {
         $('#title').html('Hello World! <br> Welcome to Paint!')
         $('#body').html(`This is where you can draw lots of cool stuff and have lots and lots of fun! Don't be afraid if it's shit! Beauty is in the eye of the beholder! <br> <br> Everybody's gotta start somewhere right! Just click one of the below icons to start drawing!`)
     })

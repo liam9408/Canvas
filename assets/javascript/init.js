@@ -1,4 +1,4 @@
-currentFunction = new DrawingRectangle(contextReal,contextDraft);
+currentFunction = new PaintFunction(contextReal,contextDraft);
 
 $('#drawing-line').on('click', function(){
     currentFunction = new DrawingLine(contextReal,contextDraft)
