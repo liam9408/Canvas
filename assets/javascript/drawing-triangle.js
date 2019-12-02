@@ -4,7 +4,6 @@ class DrawingTriangle extends PaintFunction{
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;            
     }
-    
     onMouseDown(coord,event){
         console.log(coord)
         this.contextReal.fillStyle = "#f28";
@@ -13,21 +12,31 @@ class DrawingTriangle extends PaintFunction{
     }
     onDragging(coord,event){
         this.contextDraft.fillStyle = "#f28";
+        this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
         this.contextDraft.beginPath(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextDraft.moveTo(coord[0],coord[1]);
-        this.contextDraft.lineTo(coord[0],coord[1]);
-        this.contextDraft.lineTo(coord[0],coord[1]);
-        this.contextDraft.fill(this.origX,this.origY,coord[0]- this.origX,coord[1] - this.origY)
+        this.contextDraft.moveTo(this.origX,this.origY);
+        this.contextDraft.lineTo((coord[0]),(coord[1]));
+        this.contextDraft.lineTo((this.origX+coord[0]),(this.origY+coord[1]));
+        this.contextDraft.fill()
     }
-
     onMouseMove(){}
     onMouseUp(coord){
-        this.contextDraft.beginPath(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextReal.fill(this.origX,this.origY,coord[0]- this.origX,coord[1] - this.origY)
+        this.contextReal.fillStyle = "#f28";
+        this.contextReal.beginPath(0,0,canvasDraft.width,canvasDraft.height);
+        this.contextReal.moveTo(this.origX,this.origY);
+        this.contextReal.lineTo((coord[0]),(coord[1]));
+        this.contextReal.lineTo((this.origX+coord[0]),(this.origY+coord[1]));
+        this.contextReal.fill()
+        // this.contextReal.beginPath(0,0,canvasDraft.width,canvasDraft.height);
+        // this.contextReal.moveTo(coord[0],coord[1]);
+        // this.contextReal.lineTo((coord[0]+25),(coord[1]+25));
+        // this.contextReal.lineTo((coord[0]+25),(coord[1]-25));
+        // this.contextReal.fill()
     }
     onMouseLeave(){}
     onMouseEnter(){}
 }
+
 
 
 
