@@ -2,21 +2,21 @@
 // CLICKING ON AND OFF (COLORS ONLY) -------------------------
 //
 
-var button = document.getElementsByClassName("button");
+// var button = document.getElementsByClassName("button");
 
-let count = 0;
-for (var i = 0; i < button.length; i++) {
-  $(button[i]).on("click", function() {
-    if (count % 2 === 0) {
-      $(`#${event.target.id}`).css("background-color", "deepskyblue");
-      count++;
-    } else if (count % 2 !== 0) {
-      $(`#${event.target.id}`).css("background-color", "white");
-      currentFunction = new PaintFunction(contextReal, contextDraft);
-      count++;
-    }
-  });
-}
+// let count = 0;
+// for (var i = 0; i < button.length; i++) {
+//   $(button[i]).on("click", function() {
+//     if (count % 2 === 0) {
+//       $(`#${event.target.id}`).css("background-color", "deepskyblue");
+//       count++;
+//     } else if (count % 2 !== 0) {
+//       $(`#${event.target.id}`).css("background-color", "white");
+//       currentFunction = new PaintFunction(contextReal, contextDraft);
+//       count++;
+//     }
+//   });
+// }
 
 //
 // HOVER ON BUTTONS -------------------------
@@ -112,5 +112,3 @@ $('#redo').mouseover(function() {
   })
 })
 
-
-//

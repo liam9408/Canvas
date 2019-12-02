@@ -4,3 +4,4 @@ class Redo extends PaintFunction{
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;            
     }
+}

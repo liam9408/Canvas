@@ -15,46 +15,50 @@
 <div class="flexbox">
 
 <div class="left">
+
     <div class="text-container">
         <h5 id="label" class="text-title">01. CANVAS</h5>
         <h1 id="title" class="text-title">Hello World! <br> Welcome to Paint!</h1>
         <p id="body" class="text-body">This is where you can draw lots of cool stuff and have lots and lots of fun! Don't be afraid if it's shit! Beauty is in the eye of the beholder! <br> <br> Everybody's gotta start somewhere right! Just click one of the below icons to start drawing!</p>
     </div>
+
+
+    <!-- <div class="slide-container">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    </div> -->
+
+    <div class="slider">
+        <div class="handle"></div>
+    </div>
+
     <div class="button-section">
-    <div class="buttons">       
-        <button class="button fa fa-square" id="drawing-rectangle"></button>
-        <button class="button fas fa-caret-up" id="drawing-triangle"></button>
-        <button class="button fa fa-circle" id="drawing-circle"></button>
-        <button class="button fa fa-paint-brush" id="drawing-line"></button>
-        <button class="button fa fa-eraser" id="eraser"></button>
-    </div>
-    <div class="buttons">       
-        <button class="button fa fa-file" id="clear-canvas"></button>
-        <button class="button fa fa-text-height" id="textbox"></button>
-        <button class="button fa fa-bezier-curve" id="curve-line"></button>
-        <button class="button fa fa-undo-alt" id="undo"></button>
-        <button class="button fa fa-redo-alt" id="redo"></button>
-    </div>
+        <div class="buttons">       
+            <button class="button fa fa-square" id="drawing-rectangle"></button>
+            <button class="button fas fa-caret-up" id="drawing-triangle"></button>
+            <button class="button fa fa-circle" id="drawing-circle"></button>
+            <button class="button fa fa-paint-brush" id="drawing-line"></button>
+            <button class="button fa fa-eraser" id="eraser"></button>
+        </div>
+        <div class="buttons">       
+            <button class="button fa fa-file" id="clear-canvas"></button>
+            <button class="button fa fa-text-height" id="textbox"></button>
+            <button class="button fa fa-bezier-curve" id="curve-line"></button>
+            <button class="button fa fa-undo-alt" id="undo"></button>
+            <button class="button fa fa-redo-alt" id="redo"></button>
+        </div>
     </div>
     
 </div>
 
-<div class="vl"></div>
+<!-- <div class="vl"></div> -->
         
 <div id="canvas-container">
     <canvas id="canvas-real" class="canvas" width='1250px' height='897px' style='border:2px transparent solid'></canvas>
     <canvas id="canvas-draft" class="canvas" width='1250px' height='897px' style='border:2px transparent solid'></canvas>
 </div>
 
-
-
-    
-
-
-
-
-
     <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
     <script type='text/javascript' src="./assets/javascript/canvasCommons.js"></script>
     <script type='text/javascript' src="./assets/javascript/drawing-line.js"></script>
     <script type='text/javascript' src="./assets/javascript/drawing-rectangle.js"></script>
@@ -66,6 +70,8 @@
     <script type='text/javascript' src="./assets/javascript/undo.js"></script>
     <script type='text/javascript' src="./assets/javascript/redo.js"></script>
     <script type='text/javascript' src="./assets/javascript/curve-line.js"></script>
+
+    <script type='text/javascript' src="./assets/javascript/colorpicker.js"></script>
 
     <script type="text/javascript" src="./assets/javascript/init.js"></script> 
 

@@ -4,3 +4,4 @@ class TextBox extends PaintFunction{
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;            
     }
+}
