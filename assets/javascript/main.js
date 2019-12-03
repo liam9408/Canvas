@@ -1,22 +1,16 @@
 //
-// CLICKING ON AND OFF (COLORS ONLY) -------------------------
+// BUTTON -------------------------
 //
 
-// var button = document.getElementsByClassName("button");
+$('.button').mouseover(function() {
+  $(`#${event.target.id}`).css('background-color', 'deepskyblue')
+  $(`#${event.target.id}`).css('color', 'white')
+})
 
-// let count = 0;
-// for (var i = 0; i < button.length; i++) {
-//   $(button[i]).on("click", function() {
-//     if (count % 2 === 0) {
-//       $(`#${event.target.id}`).css("background-color", "deepskyblue");
-//       count++;
-//     } else if (count % 2 !== 0) {
-//       $(`#${event.target.id}`).css("background-color", "white");
-//       currentFunction = new PaintFunction(contextReal, contextDraft);
-//       count++;
-//     }
-//   });
-// }
+$('.button').mouseleave(function() {
+  $(`#${event.target.id}`).css('background-color', 'white')
+  $(`#${event.target.id}`).css('color', 'black')
+})
 
 //
 // HOVER ON BUTTONS -------------------------

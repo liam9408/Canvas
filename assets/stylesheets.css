@@ -68,7 +68,7 @@ SETUP
 
 .left {
     width: 25%;
-    height: ;
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,12 +85,14 @@ SETUP
   }
 
 .button-section {
-    width: 100%;
-    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
+    width: 100%;
+    top: 75%;
+    /* position: absolute; */
 }
 
 
@@ -119,17 +121,25 @@ BUTTONS
     box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.60);
 }
 
-.button:hover {
+
+.expanding-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.60);
+    display: flex;
+    align-items: center;
+}
+
+/* .button:hover {
     -webkit-box-shadow: 0px 0px 90px -15px rgba(0,0,0,1);
     -moz-box-shadow: 0px 0px 90px -15px rgba(0,0,0,1);
     box-shadow: 0px 0px 90px -15px rgba(0,0,0,1);
     background-color: DEEPSKYBLUE;
     color: white;
-}
-
-.button-section {
-    margin-bottom: 50px;
-}
+} */
 
 .fa {
     color: black;
@@ -155,16 +165,78 @@ TEXTS
 
 /*
 ===================================================================
+COLOR PICKER
+===================================================================
+*/
+
+.fa-palette {
+    position: absolute;
+}
+
+#color-picker {
+    background-color: white !important;
+    display: flex;
+    justify-content: center
+}
+
+.color-button {
+    display: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.50);
+}
+
+.color-picker-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#color-button-red {
+    background-color: #DC143C;
+}
+
+#color-button-orange {
+    background-color: #FF4500;
+}
+
+#color-button-yellow {
+    background-color: #FFFF00;
+}
+
+#color-button-green {
+    background-color: #3CB371;
+}
+
+#color-button-blue {
+    background-color: #4169E1;
+}
+
+#color-button-purple {
+    background-color: #8B008B
+}
+
+#color-button-black {
+    background-color: #000;
+}
+
+/*
+===================================================================
 SLIDER
 ===================================================================
 */
 .slider {
     position: relative;
-    width: 300px;
+    width: 78%;
     height: 4px;
     margin: 10%;
     background: red;
     border-radius: 2px;
+    display: none;
     
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3232+0,fff130+20,45ff30+35,28fff0+52,282cff+71,ff28fb+88,ff0094+100 */
   
@@ -194,7 +266,6 @@ SLIDER
   }
   
   .handle.pop {
-    
     box-shadow: 0 0 4px 0 rgba(0,0,0,.3), inset 0 0 0 4px #fff;
   }
   
@@ -210,7 +281,8 @@ SLIDER
     border-radius: 20px;
     transition: top .2s,left .2s,margin-left .2s, height .2s,width .2s;
    }
-  .handle.pop:before {
+  .handle
+  .pop:before {
     top:-50px;
     left:50%;
     margin-left: -20px;
@@ -223,3 +295,4 @@ SLIDER
    }
   
   
+   

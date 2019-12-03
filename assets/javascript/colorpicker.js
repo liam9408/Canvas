@@ -1,32 +1,77 @@
-$(".handle").mousedown(function() {
-  $(this).addClass("pop");
-  $(this).parent(".slider").addClass("grad");
+//
+// COLOR PICKER -------------------------
+//
 
-  });
-$(".handle").mouseup(function() {
-  $(this).removeClass("pop");
-    $(this).parent(".slider").removeClass("grad");
+$('#color-picker').mouseover(function() {
+  $('#color-picker').animate({height: "100px", width: "400px"}, 300)
+  // $('.slider').slideDown()
+  $('.color-button').slideDown()
+  $('#color-picker').css('box-shadow', '0px 0px 40px -15px rgba(0,0,0,0.20)')
+  $('.fa-palette').slideUp()
+})
 
-  });
+$('#color-picker').mouseleave(function() {
+  $('#color-picker').animate({height: "50px", width: "50px"}, 300)
+  // $('.slider').slideDown()
+  $('.color-button').slideUp()
+  $('#color-picker').css('box-shadow', '0px 0px 40px -15px rgba(0,0,0,0.60)')
+  $('.fa-palette').slideDown()
+})
+
+//
+// SELECTING COLOR -------------------------
+//
+
+var currentColor = "Black";
+
+// var colorButtons = document.getElementsByClassName("color-button")
+
+// var colorCodes = ["#DC143C", "#FF4500", "#3CB371", "#4169E1", "#8B008B"]
+
+// for (var i = 0; i < colorButtons.length; i++) {
+//   colorButtons[i].click(function() {
+//     currentColor = colorCodes[i];
+//     console.log(colorCodes[i])
+//   })
+// }
+
+$('#color-button-red').click(function() {
+  currentColor = "#DC143C";
+  // $(this).css('border-style', 'double')
+})
   
+$('#color-button-orange').click(function() {
+  currentColor = "#FF4500";
+  // $(this).css('border-style', 'double')
+})
 
-    $( ".handle" ).draggable({ 
-    axis: "x",
-    containment: "parent",
-    drag: function( event, ui ) {
-      var thisOffset = $(this).position().left;
-      var angle = (thisOffset/300)*360;
-      var hslcolor = "hsl("+ angle + ", 100%, 50%)";
-      $(this).css("background-color", hslcolor)
-      
-      $(this).parent(".slider").css("background-color", hslcolor)
-    },
-    /*start: function( event, ui ) {
-      $(this).addClass("pop");
-       $(this).parent(".slider").addClass("grad");
-    },*/
-    stop: function( event, ui ) {
-      $(this).removeClass("pop");
-           $(this).parent(".slider").removeClass("grad");
-    }
-  });
+$('#color-button-green').click(function() {
+  currentColor = "#3CB371";
+  // $(this).css('border-style', 'double')
+})
+
+$('#color-button-blue').click(function() {
+  currentColor = "#4169E1";
+  // $(this).css('border-style', 'double')
+})
+
+$('#color-button-purple').click(function() {
+  currentColor = "#8B008B";
+  // $(this).css('border-style', 'double')
+})
+
+$('#color-button-black').click(function() {
+  currentColor = "#000";
+  // $(this).css('border-style', 'double')
+})
+
+$('#color-button-yellow').click(function() {
+  currentColor = "#FFFF00";
+  // $(this).css('border-style', 'double')
+})
+
+
+
+$( function() {
+  $( "#slider" ).slider();
+} );

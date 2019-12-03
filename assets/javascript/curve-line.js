@@ -2,7 +2,10 @@ class CurveLine extends PaintFunction{
     constructor(contextReal,contextDraft){
         super();
         this.contextReal = contextReal;
-        this.contextDraft = contextDraft;            
+        this.contextDraft = contextDraft;
+        this.color = currentColor;   
+        this.lineWidth = lineWidth;           
+            
     }
 
     onMouseDown(coord, event){
@@ -15,8 +18,8 @@ class CurveLine extends PaintFunction{
         this.contextDraft.beginPath();
         this.contextDraft.moveTo(this.origX, this.origY);
         this.contextDraft.bezierCurveTo(coord[0], coord[1], coord[0], coord[1], (this.origX+500), (this.origY));
-        this.contextDraft.lineWidth = 5;
-        this.contextDraft.strokeStyle = '#00BFFF';
+        this.contextDraft.lineWidth = lineWidth;
+        this.contextDraft.strokeStyle = currentColor;
         this.contextDraft.stroke();
     }
     onMouseMove(){}
@@ -26,7 +29,7 @@ class CurveLine extends PaintFunction{
         this.contextReal.moveTo(this.origX, this.origY);
         this.contextReal.bezierCurveTo(coord[0], coord[1], coord[0], coord[1], (this.origX+500), (this.origY));
         this.contextReal.lineWidth = 5;
-        this.contextReal.strokeStyle = '#00BFFF';
+        this.contextReal.strokeStyle = currentColor;
         this.contextReal.stroke();
      }
     onMouseLeave(){}
