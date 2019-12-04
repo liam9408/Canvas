@@ -3,7 +3,9 @@ class ClearCanvas extends PaintFunction{
         super();
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;      
-        this.contextReal.clearRect(0,0,canvasDraft.width,canvasDraft.height);      
+        contextReal.fillStyle = '#ebe0df';
+    contextReal.fillRect(0,0,canvasReal.width, canvasReal.height);    
+    saveMe(); 
     }
     
     onMouseDown(){}
