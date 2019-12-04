@@ -7,6 +7,9 @@ let dragging = false;
 /*============================================================================
 *                             undo/red
 ============================================================================*/
+
+contextReal.fillStyle = '#ebe0df';
+contextReal.fillRect(0,0,canvasReal.width, canvasReal.height);
 let data = [];
 let poppedData = data.pop();
 let canvasPic = new Image();

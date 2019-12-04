@@ -64,8 +64,11 @@ $('#redo').on('click', function(){
 
 
 function saveMe(){ 
+
+    console.log(canvasReal)
     let dataURL = canvasReal.toDataURL(); //why this.dataURL does not work? 
     data.push(dataURL);
+    console.log(data)
 }
 
 function undoI(){
@@ -76,8 +79,8 @@ function undoI(){
     }
 
     if(data.length === 1){
-        contextReal.fillStyle = '#fff';
-        contextReal.fillRect(0,0,1280, 720);
+        contextReal.fillStyle = '#ebe0df';
+        contextReal.fillRect(0,0,canvasReal.width, canvasReal.height);
         redoData.push(data.pop()); 
     }else{ 
     let poppedData = data.pop();
@@ -85,7 +88,9 @@ function undoI(){
     canvasPic.src = lastItemUndo ;
     redoData.push(poppedData);
 
-    canvasPic.onload = function () { contextReal.drawImage(canvasPic, 0, 0); }
+    canvasPic.onload = function () { 
+
+        contextReal.drawImage(canvasPic, 0, 0); }
 
     } if(data.length === 0){
         return;
