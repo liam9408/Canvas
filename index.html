@@ -20,9 +20,9 @@
         <h1 id="title" class="text-title">Hello World! <br> Welcome to Paint!</h1>
         <p id="body" class="text-body">This is where you can draw lots of cool stuff and have lots and lots of fun! Don't be afraid if it's shit! Beauty is in the eye of the beholder! <br> <br> Everybody's gotta start somewhere right! Just click one of the below icons to start drawing!</p>
     </div>
-    <div class="slidecontainer">
+    <!-- <div class="slidecontainer">
          <input type="range" min="1" max="100" id="range">
-    </div>
+    </div> -->
     <div class="button-section">
         <div id="buttons-slider" class="buttons">       
             <button class="expanding-button" id="color-picker">  
@@ -45,12 +45,20 @@
                     <a class="brush-button fa fa fa-brush" id="brush-button-three"></a>
                 </div>
             </button>
+            <button class="expanding-button" id="lineWidth-picker">  
+                <p id="linewidthIndicator">LW:<br>5px</p>
+                <div class="lineWidth-picker-container">
+                    <input type="range" min="1" max="100" id="range">
+                </div>
+            </button>
+            <div class="button-placeholder"></div>
+            <div class="button-placeholder"></div>
         </div>
         <div class="buttons">  
             <button class="button fa fa-square" id="drawing-rectangle"></button>
             <button class="button fas fa-caret-up" id="drawing-triangle"></button>
             <button class="button fa fa-circle" id="drawing-circle"></button>
-            <button class="button fa fa-paint-brush" id="drawing-line"></button>
+            <button class="button fa fa-grip-lines" id="drawing-line"></button>
             <button class="button fa fa-eraser" id="eraser"></button>
         </div>
         <div class="buttons">       
