@@ -26,6 +26,7 @@ class DrawingRectangle extends PaintFunction{
         this.contextReal.shadowBlur = 0;
         this.contextReal.shadowColor = currentColor;
         this.contextReal.fillRect(this.origX,this.origY,coord[0]- this.origX,coord[1] - this.origY)
+      
     }
     onMouseLeave(){}
     onMouseEnter(){}

@@ -48,3 +48,59 @@ $('#brush-button-spray').on('click', function(){
     currentFunction = new Spray(contextReal,contextDraft, currentColor)
 })
 
+
+
+/*============================================================================
+*                               REDO UNDO
+============================================================================*/
+$('#undo').on('click', function(){
+    console.log('undo yes') ; 
+  undoI();
+})
+$('#redo').on('click', function(){
+    console.log('redo yes') ; 
+  redoI();
+})
+
+
+function saveMe(){ 
+    let dataURL = canvasReal.toDataURL(); //why this.dataURL does not work? 
+    data.push(dataURL);
+}
+
+function undoI(){
+    console.log(data.length);
+    if(data.length === 0){
+        return;
+        // stop the function if data[] is empty
+    }
+
+    if(data.length === 1){
+        contextReal.fillStyle = '#fff';
+        contextReal.fillRect(0,0,1280, 720);
+        redoData.push(data.pop()); 
+    }else{ 
+    let poppedData = data.pop();
+    let lastItemUndo = data[data.length-1];
+    canvasPic.src = lastItemUndo ;
+    redoData.push(poppedData);
+
+    canvasPic.onload = function () { contextReal.drawImage(canvasPic, 0, 0); }
+
+    } if(data.length === 0){
+        return;
+    }
+}
+
+function redoI(){
+    
+    if(redoData.length === 0){
+        return;
+    }  // stop the function if redodata[] is empty
+
+    let poppedRedo = redoData.pop();
+    data.push(poppedRedo);
+    let lastItemRedo = redoData[redoData.length-1];
+    canvasPic.src = poppedRedo;
+    canvasPic.onload = function () { contextReal.drawImage(canvasPic, 0, 0); }
+}

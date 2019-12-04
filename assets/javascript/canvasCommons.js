@@ -4,6 +4,13 @@ let canvasDraft = document.getElementById('canvas-draft');
 let contextDraft = canvasDraft.getContext('2d');
 let currentFunction;
 let dragging = false;
+/*============================================================================
+*                             undo/red
+============================================================================*/
+let data = [];
+let poppedData = data.pop();
+let canvasPic = new Image();
+let redoData =[]
 
 $('#canvas-draft').mousedown(function(e){
     let mouseX = e.offsetX;
@@ -28,6 +35,7 @@ $('#canvas-draft').mouseup(function(e){
     let mouseX = e.offsetX;
     let mouseY = e.offsetY;
     currentFunction.onMouseUp([mouseX,mouseY],e);
+    saveMe();
 });
 
 $('#canvas-draft').mouseleave(function(e){
