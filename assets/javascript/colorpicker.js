@@ -1,9 +1,21 @@
 //
+// HOVER EFFECT -------------------------
+//
+
+$('.color-button').mouseover(function() {
+  $(`#${event.target.id}`).animate({width: '35px', height: '35px'}, 80, 'linear');
+})
+
+$('.color-button').mouseleave(function() {
+  $(`#${event.target.id}`).animate({width: '30px', height: '30px'}, 80, 'linear');
+})
+
+//
 // COLOR PICKER -------------------------
 //
 
 $('#color-picker').mouseover(function() {
-  $('#color-picker').animate({height: "100px", width: "400px"}, 300)
+  $('#color-picker').animate({height: "300px", width: "50px"}, 300)
   // $('.slider').slideDown()
   $('.color-button').slideDown()
   $('#color-picker').css('box-shadow', '0px 0px 40px -15px rgba(0,0,0,0.20)')
@@ -71,7 +83,3 @@ $('#color-button-yellow').click(function() {
 })
 
 
-
-$( function() {
-  $( "#slider" ).slider();
-} );

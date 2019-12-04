@@ -29,6 +29,8 @@ class DrawingCircle extends PaintFunction {
         this.contextReal.beginPath();
         this.contextReal.arc(coord[0], coord[1],coord[1]- this.origY , 0, 2 * Math.PI);
         this.contextReal.fillStyle = currentColor;
+        this.contextReal.shadowBlur = 0;
+        this.contextReal.shadowColor = currentColor;
         this.contextReal.fill();
         // this.contextReal.lineWidth = 5;
         // this.contextReal.strokeStyle = '#9370DB';

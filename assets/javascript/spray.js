@@ -1,4 +1,4 @@
-class DrawingLineStyle extends PaintFunction{
+class Spray extends PaintFunction{
     constructor(contextReal){
         super();
         this.context = contextReal;   
@@ -8,8 +8,8 @@ class DrawingLineStyle extends PaintFunction{
     onMouseDown(coord,event){
         this.context.strokeStyle = currentColor;
         this.context.lineJoin = "round";
-        this.context.lineWidth = 5;
-        this.context.shadowBlur = 10;
+        this.context.lineWidth = lineWidth;
+        this.context.shadowBlur = lineWidth;
         this.context.shadowColor = currentColor;
         this.context.beginPath();
         this.context.moveTo(coord[0],coord[1]);

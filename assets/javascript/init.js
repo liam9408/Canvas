@@ -1,6 +1,6 @@
 currentFunction = new PaintFunction(contextReal,contextDraft);
 
-$('#drawing-line').on('click', function(){
+$('#brush-button-normal').on('click', function(){
     currentFunction = new DrawingLine(contextReal,contextDraft, currentColor)
 })
 
@@ -40,6 +40,11 @@ $('#curve-line').on('click', function(){
     currentFunction = new CurveLine(contextReal,contextDraft, currentColor)
 })
 
+$('#curve-line').on('click', function(){
+    currentFunction = new CurveLine(contextReal,contextDraft, currentColor)
+})
 
+$('#brush-button-spray').on('click', function(){
+    currentFunction = new Spray(contextReal,contextDraft, currentColor)
+})
 
-$('#curve-line').click()
