@@ -8,6 +8,9 @@ let dragging = false;
 *                             undo/red
 ============================================================================*/
 
+
+contextDraft.fillStyle = '#ebe0df';
+contextDraft.fillRect(0,0,canvasReal.width, canvasReal.height);
 contextReal.fillStyle = '#ebe0df';
 contextReal.fillRect(0,0,canvasReal.width, canvasReal.height);
 let data = [];

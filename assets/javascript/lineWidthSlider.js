@@ -12,8 +12,6 @@ slider.oninput = function() {
 }
 
 
-
-
 //
 // PICKER -------------------------
 //

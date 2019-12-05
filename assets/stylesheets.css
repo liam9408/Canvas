@@ -328,6 +328,7 @@ SLIDER
 
 input[type=range] {
     -webkit-appearance: none;
+    display: none;
     /* width: 100%; */
     margin: 10.8px 0;
     transform: rotate(270deg); /* MADE IT VERTICAL */

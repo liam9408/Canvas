@@ -48,6 +48,10 @@ $('#brush-button-spray').on('click', function(){
     currentFunction = new Spray(contextReal,contextDraft, currentColor)
 })
 
+$('#selector').on('click', function(){
+    currentFunction = new Selecting(contextReal,contextDraft, currentColor)
+})
+
 
 
 /*============================================================================
