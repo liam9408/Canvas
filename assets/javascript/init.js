@@ -52,6 +52,9 @@ $('#selector').on('click', function(){
     currentFunction = new Selecting(contextReal,contextDraft, currentColor)
 })
 
+$('#selector-button').click(() => {
+    currentFunction = new Selecting(contextReal,contextDraft);
+});
 
 
 /*============================================================================

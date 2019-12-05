@@ -3,12 +3,6 @@ selectorLineColor = "black";
 selectorLineWidth = 1;
 minSizeNecessary = 3
 
-$('#selector-button').click(() => {
-
-    currentFunction = new Selecting(contextReal,contextDraft);
-
-});
-
 class Selecting extends PaintFunction{
     constructor(contextReal,contextDraft){
         super();
@@ -38,9 +32,12 @@ class Selecting extends PaintFunction{
 
             if ((coord[0] > this.origX) && (coord[0] < this.objX) && (coord[1] > this.origY) && (coord[1] < this.objY)) {
 
-                
                 if (this.originalMove == true) {
-                    this.contextReal.clearRect(this.origX, this.origY, this.obj.width, this.obj.height);
+                    // this.contextReal.clearRect(this.origX, this.origY, this.obj.width, this.obj.height);
+
+                    this.contextReal.fillStyle = '#ebe0df';
+                    this.contextReal.fillRect(this.origX,this.origY,this.obj.width, this.obj.height);
+
                     this.originalMove = false;
                 }
                 this.putImage([this.objDraft, this.origX, this.origY], [this.obj, this.origX, this.origY]);                
@@ -57,11 +54,11 @@ class Selecting extends PaintFunction{
         }   
     };
 
-
     onDragging(coord,event){
 
         if (this.selectionMade == false) {
 
+            console.log(this.origX, this.origY)
 
             this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
             this.contextDraft.beginPath();
@@ -85,10 +82,14 @@ class Selecting extends PaintFunction{
             if (this.checkSize() == true) {
                 this.getDraftImage(coord);
                 this.obj = this.contextReal.getImageData(this.origX, this.origY, coord[0]- this.origX, coord[1] - this.origY); 
+                
+                console.log(this.origX, this.origY)
+
                 this.selectionMade = true;
                 this.originalMove = true;
-                this.contextReal.fillStyle = '#ebe0df';
-                this.contextReal.fillRect(this.origX,this.origY,coord[0] - this.origX, coord[1] - this.origY);
+                // this.contextReal.fillStyle = '#ebe0df';
+                // this.contextReal.fillRect(this.origX,this.origY, this.objX, this.objY);
+
             } else this.selectionMade = false;
 
         }   else  { 
@@ -99,8 +100,6 @@ class Selecting extends PaintFunction{
             this.origY = coord[1] - this.obj.height/2;
             this.objX = coord[0] + this.obj.width/2;
             this.objY = coord[1] + this.obj.height/2;
-
-            
         }
         
     };
