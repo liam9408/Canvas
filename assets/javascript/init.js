@@ -26,6 +26,7 @@ $('#clear-canvas').on('click', function(){
 
 $('#textbox').on('click', function(){
     currentFunction = new TextBox(contextReal,contextDraft, currentColor)
+    $(`.wrapper`).toggle();
 })
 
 $('#undo').on('click', function(){

@@ -80,7 +80,7 @@ $('#textbox').mouseover(function() {
 })
 
 $('#curve-line').mouseover(function() {
-  $('#title').html('Bezier Curve')
+  $('#title').html('Curved Line')
   $('#body').html(`A Bézier curve is a parametric curve used in computer graphics and related fields. <br> <br> The curve, which is related to the Bernstein polynomial, is named after Pierre Bézier, who used it in the 1960s for designing curves for the bodywork of Renault cars.`)
   $(this).mouseleave(function() {
       $('#title').html('Hello World! <br> Welcome to Paint!')

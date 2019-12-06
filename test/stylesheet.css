@@ -1,0 +1,23 @@
+.wrapper {
+    display: inline-block;
+    position:relative;
+    border: dotted 1px #ccc;
+  }
+  #close {
+      display:inline-block;
+      padding:2px 5px;
+      background:#ccc;
+  }
+  #rotate {
+    position: absolute;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    bottom: -10px;
+    right: -10px;
+  }
+  textarea {
+    margin:15px;
+  }
