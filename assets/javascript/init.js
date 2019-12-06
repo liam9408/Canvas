@@ -1,4 +1,4 @@
-currentFunction = new PaintFunction(contextReal,contextDraft);
+currentFunction = new Spray(contextReal,contextDraft);
 
 $('#brush-button-normal').on('click', function(){
     currentFunction = new DrawingLine(contextReal,contextDraft, currentColor)

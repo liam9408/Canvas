@@ -17,13 +17,13 @@ slider.oninput = function() {
 //
 
   $('#lineWidth-picker').mouseover(function() {
-    $('#lineWidth-picker').animate({height: "200px", width: "50px"}, 300)
     $('#range').slideDown()
+    $('#lineWidth-picker').animate({height: "200px", width: "50px"}, 300)
     $('#linewidthIndicator').css('display', 'none');
   })
   
   $('#lineWidth-picker').mouseleave(function() {
-    $('#lineWidth-picker').animate({height: "50px", width: "50px"}, 300)
     $('#range').slideUp()
+    $('#lineWidth-picker').animate({height: "50px", width: "50px"}, 300)
     $('#linewidthIndicator').css('display', '');
   })

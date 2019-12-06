@@ -15,19 +15,18 @@ $('.color-button').mouseleave(function() {
 //
 
 $('#color-picker').mouseover(function() {
-  $('#color-picker').animate({height: "300px", width: "50px"}, 300)
-  // $('.slider').slideDown()
-  $('.color-button').slideDown()
-  $('#color-picker').css('box-shadow', '0px 0px 40px -15px rgba(0,0,0,0.20)')
   $('.fa-palette').slideUp()
+  $('.color-button').slideDown()
+  $('#color-picker').animate({height: "300px", width: "50px"}, 300)
+  $('#color-picker').css('box-shadow', '0px 0px 40px -15px rgba(0,0,0,0.20)')
+
 })
 
 $('#color-picker').mouseleave(function() {
-  $('#color-picker').animate({height: "50px", width: "50px"}, 300)
-  // $('.slider').slideDown()
-  $('.color-button').slideUp()
-  $('#color-picker').css('box-shadow', '0px 0px 40px -15px rgba(0,0,0,0.60)')
   $('.fa-palette').slideDown()
+  $('.color-button').slideUp()
+  $('#color-picker').animate({height: "50px", width: "50px"}, 300)
+  $('#color-picker').css('box-shadow', '0px 0px 40px -15px rgba(0,0,0,0.60)')
 })
 
 //
