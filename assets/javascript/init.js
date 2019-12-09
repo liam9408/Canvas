@@ -16,6 +16,10 @@ $('#drawing-circle').on('click', function(){
     currentFunction = new DrawingCircle(contextReal,contextDraft, currentColor)
 })
 
+$('#drawing-line').on('click', function(){
+    currentFunction = new DrawingStraightLine(contextReal,contextDraft, currentColor)
+})
+
 $('#eraser').on('click', function(){
     currentFunction = new Eraser(contextReal,contextDraft, currentColor)
 })
@@ -55,6 +59,14 @@ $('#selector').on('click', function(){
 
 $('#selector-button').click(() => {
     currentFunction = new Selecting(contextReal,contextDraft);
+});
+
+$('#saveButton').click(() => {
+    var link = document.getElementById('link');
+    console.log('saved')
+    link.setAttribute('download', 'CanvasProject.png');
+    link.setAttribute('href', canvasReal.toDataURL("image/png").replace("image/png", "image/octet-stream"));
+    link.click();
 });
 
 
